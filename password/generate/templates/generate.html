@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+</head>
+
+<body>
+    <div class="container text-center">
+        <h1>Password is:</h1><br>
+        <h2 class="alert alert-success"> {{password}}</h2>
+        <a href="{% url 'home' %}" class="btn btn-warning">Home</a>
+    </div>
+</body>
+
+</html>

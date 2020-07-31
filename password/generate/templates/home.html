@@ -1,0 +1,47 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="container text-center">
+        <h1>Password:</h1> <br>
+        <form action="{% url 'generate' %}">
+
+            <select name="length" id="">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4" selected="selected">4</option>
+    <option value="5">5</option>
+    <option value="6" >6</option>
+</select>Length
+            <br>
+            <input type="checkbox" name="upper" id="" >UpperCase
+            <br>
+            <br>
+            <input type="checkbox" name="lower" id="">LowerCase
+            
+            <br>
+            <input type="checkbox" name="num" id="">Numbers
+            
+            <br>
+            <input type="checkbox" name="special" id="">Special Characters
+            <br>
+            <input type="submit" class="btn btn-primary">
+        
+
+
+
+        </form>
+    </div>
+</body>
+
+</html>
